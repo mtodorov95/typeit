@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "700529763924",
+    "firebase_url": "https://typeit-c93b6.firebaseio.com",
+    "project_id": "typeit-c93b6",
+    "storage_bucket": "typeit-c93b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700529763924:android:88ef92af8c59d55fed6fc1",
+        "android_client_info": {
+          "package_name": "com.apps.typeit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700529763924-hohhm5r35sf5h8phu7b0ih2n8elphhsm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCoXw0XqsYuwOud-84eN_tRcm_h6107Bo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700529763924-hohhm5r35sf5h8phu7b0ih2n8elphhsm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
