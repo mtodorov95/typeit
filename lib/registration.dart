@@ -18,15 +18,16 @@ class _RegistrationState extends State<Registration> {
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  Future<void> registeruser()async{
-    AuthResult user = await _auth.createUserWithEmailAndPassword(
+  Future<void> registerUser()async{
+    AuthResult result = await _auth.createUserWithEmailAndPassword(
         email: email,
         password: password
     );
+    FirebaseUser user = result.user;
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => Chat(),
+        builder: (context) => Chat(user: user,),
       ),
     );
   }
@@ -56,18 +57,29 @@ class _RegistrationState extends State<Registration> {
             height: 40,
           ),
           TextField(
-
+            keyboardType: TextInputType.emailAddress,
+            onChanged: (value) => email = value,
+            decoration: InputDecoration(
+              hintText: 'Enter your email...',
+              border: const OutlineInputBorder(),
+            ),
           ),
           SizedBox(
             height: 40,
           ),
           TextField(
-
+            autocorrect: false,
+            obscureText: true,
+            onChanged: (value) => password = value,
+            decoration: InputDecoration(
+              hintText: 'Enter your password...',
+              border: const OutlineInputBorder(),
+            ),
           ),
           CustomButton(
             text: 'Register',
             callback: () async {
-              await registeruser();
+              await registerUser();
             },
           ),
         ],
