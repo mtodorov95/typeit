@@ -11,11 +11,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Typeit',
       theme: ThemeData.dark(),
       initialRoute: MyHomePage.id,
       routes: {
@@ -44,6 +43,7 @@ class MyHomePage extends StatelessWidget {
               Hero(
                 tag: 'logo',
                 child: Container(
+                  width: 100,
                   child: Image.asset('assets/logo.png'),
                 ),
               ),
